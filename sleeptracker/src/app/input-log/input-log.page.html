@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons> 
+      <ion-back-button></ion-back-button> 
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="onSubmit()">
+    <h2><ion-icon></ion-icon> Started Sleep At</h2>
+
+    <ion-item class="ion-padding">
+      <ion-datetime [(ngModel)] = "nightTime" picker-format = "MMM D h:mm A" display-format = "MMM D h:mm A" placeholder = "Select Time" name = "sleepTime" ></ion-datetime>
+    </ion-item>
+
+    <h2><ion-icon></ion-icon> Woke Up At</h2>
+
+    <ion-item class="ion-padding">
+      <ion-datetime [(ngModel)] = "morningTime" picker-format = "MMM D h:mm A" display-format = "MMM D h:mm A" placeholder = "Select Time" name = "morningTime"></ion-datetime>
+    </ion-item>
+
+    <ion-button routerLink = "/home" color="light" type="submit">Submit</ion-button>
+  </form>
+
+</ion-content>

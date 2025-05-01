@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button (click) = "clearStorage()" expand = "block" routerLink = "/home" color = "dark" class = "ion-padding"> Clear </ion-button>
+  <ion-card *ngFor = "let d of data">
+    <ion-card-header>{{ d.dateString() }} </ion-card-header>
+    <ion-card-content>{{ d.summaryString() }}</ion-card-content>
+  </ion-card>
+</ion-content>
